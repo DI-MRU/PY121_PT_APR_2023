@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Profile Page{% endblock %}
+
+{% block page_content_title %}Profile Page{% endblock %}
+
+{% block page_content %}
+{% for user in users %}
+{# Display the user name as a header 3 #}
+<h3>{% if user.gender == "M"%} Mr {% else %} Mrs {% endif %}{{ user.username }}</h3>
+{% endfor %}
+{% endblock %}

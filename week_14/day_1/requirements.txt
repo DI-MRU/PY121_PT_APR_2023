@@ -1,0 +1,4 @@
+django
+faker==19.1.0
+numpy
+pandas

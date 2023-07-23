@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block page_title %}Home Page{% endblock %}
+
+{% block page_content_title %}Home Page akusdyfiusdgfh{% endblock %}
+
+{% block page_content %}
+{{ block.super }}
+<h2>Welcome {{user.first_name|upper}} {{user.last_name|lower}}</h2>
+
+<section>
+    <ul>
+        {% for subject in subjects %}
+        <li>
+            <h3 {% if subject.approval == 1 %} style="color:greenyellow" {% endif %}>{{ subject.title }} written
+                by {{ subject.author }}</h3>
+            <p>{{ subject.content|truncatewords:10|default:"This is a default value" }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
