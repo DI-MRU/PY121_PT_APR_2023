@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+    <ol>
+    {% for owner in owners %}
+        <li>{{ owner }} 
+            <ul>
+            {% for pet in owner.pets %}
+                <li>{{ pet.name }}</li>
+            {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ol>
+{% endblock %}

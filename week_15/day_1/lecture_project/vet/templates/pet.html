@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<h1>Pet: {{pet.name}}</h1>
+    <ol>
+    {% for tag in tags %}
+        <li>{{ tag }}</li>
+    {% endfor %}
+    </ol>
+{% endblock %}
