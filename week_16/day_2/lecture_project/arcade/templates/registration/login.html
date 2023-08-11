@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ page_title|default:"Homepage" }}
+{% endblock title %}
+
+{% block content %}
+<h2> Login ! </h2>
+{% endblock content %}
+
+{% block form %}
+{{ block.super }}
+{% endblock form %}

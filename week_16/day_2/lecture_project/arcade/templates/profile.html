@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ page_title|default:"Homepage" }}
+{% endblock title %}
+
+{% block content %}
+{{ block.super }}
+{% if user.is_authenticated %}
+<p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+<p>Welcome, new user. Please log in.</p>
+{% endif %}
+{% endblock content %}
+
+
+{% block form %}
+{% endblock form %}

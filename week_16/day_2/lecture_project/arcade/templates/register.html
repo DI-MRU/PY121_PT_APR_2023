@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ page_title|default:"User Registration" }}
+{% endblock title %}
+
+{% block content %}
+{% endblock content %}
+
+{% block form %}
+<form method="POST">
+    {% csrf_token %}
+
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
+
+    <input type="submit" value="Register" class="btn btn-success">
+</form>
+{% endblock form %}
